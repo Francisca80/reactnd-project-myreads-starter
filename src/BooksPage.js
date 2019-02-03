@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { Component } from "react";
 
-class Books extends React.Component{
+
+
+
+class BooksPage extends Component{
     render(){
         return(
     
@@ -166,4 +169,5 @@ class Books extends React.Component{
           </div>
         )
     }
-};
+}
+export default BooksPage ;
