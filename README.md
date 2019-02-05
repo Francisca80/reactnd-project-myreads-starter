@@ -17,6 +17,11 @@ On the terminal or command line, type npm install to install all dependencies
 Type npm start to launch the app on your browser
 
 
+Inline-style: 
+![alt text](https://github.com/Francisca80/reactnd-project-myreads-starter/blob/master/MyReads.png?raw=true)
+      
+
+
 #Introduction
 
 The page contains three bookshelves with different books.
