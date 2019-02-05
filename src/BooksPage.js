@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import oneBook from "./oneBook";
+import SingleBook from "./SingleBook";
 
-
+/**
+ * The Bookspage page component. 
+ * Shows the books and the shelves and arrange them.
+ */
 
 class BooksPage extends Component{
     render(){
         return(
-    
-
-<div className="list-books">
+         <div className="list-books">
             <div className="list-books-title">
               <h1>MyReads </h1>
             </div>
@@ -23,7 +24,7 @@ class BooksPage extends Component{
                     .filter(book => book.shelf === "currentlyReading")
                     .map(book => (
                       <li key={book.id}>
-                        <oneBook
+                        <SingleBook
                           book={book}
                           moveShelf={this.props.moveShelf}
                           currentShelf="currentlyReading"
@@ -33,58 +34,51 @@ class BooksPage extends Component{
                 </ol>
               </div>
             </div>
-                  
-                <div className="bookshelf">
-                  <h2 className="bookshelf-title">Want to Read</h2>
+            <div className="bookshelf">
+                <h2 className="bookshelf-title">Want to Read</h2>
                   <div className="bookshelf-books">
                     <ol className="books-grid">
-                    {this.props.books
-                    .filter(book => book.shelf === "wantToRead")
-                    .map(book => (
-                      <li key={book.id}>
-                        <oneBook
-                          book={book}
-                          moveShelf={this.props.moveShelf}
-                          currentShelf="wantToRead"
-                        />
-                      </li>
-                    ))}
-
-                </ol>
+                      {this.props.books
+                        .filter(book => book.shelf === "wantToRead")
+                        .map(book => (
+                          <li key={book.id}>
+                            <SingleBook
+                            book={book}
+                            moveShelf={this.props.moveShelf}
+                            currentShelf="wantToRead"
+                            />
+                        </li>
+                        ))}
+                     </ol>
+                    </div>
+                  </div> 
+                   <div className="bookshelf">
+                     <h2 className="bookshelf-title">Read</h2>
+                       <div className="bookshelf-books">
+                         <ol className="books-grid">
+                          {this.props.books
+                           .filter(book => book.shelf === "read")
+                           .map(book => (
+                               <li key={book.id}>
+                                <SingleBook
+                                book={book}
+                                 moveShelf={this.props.moveShelf}
+                                currentShelf="read"
+                                />
+                            </li>
+                          ))}
+                        </ol>
+                      </div>
+                    </div>           
+                  </div>
+                </div>
+              <div className="open-search">
+                <Link to="/search">Add a book</Link>
               </div>
-            </div> 
+            </div>
+          );
+        }
+      }
 
-                <div className="bookshelf">
-                  <h2 className="bookshelf-title">Read</h2>
-                  <div className="bookshelf-books">
-                    <ol className="books-grid">
-                   
-                  {this.props.books
-                    .filter(book => book.shelf === "read")
-                    .map(book => (
-                      <li key={book.id}>
-                        <oneBook
-                          book={book}
-                          moveShelf={this.props.moveShelf}
-                          currentShelf="read"
-                        />
-                      </li>
-                    ))}
-                </ol>
-                     
-                
-          
-              </div>
-            </div>           
-                           
-                  
-            </div>
-            </div>
-            <div className="open-search">
-            <Link to="/search">Add a book</Link>
-            </div>
-          </div>
-        )
-    }
-}
-export default BooksPage ;
+
+  export default BooksPage ;

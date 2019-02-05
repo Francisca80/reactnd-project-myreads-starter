@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 
-class oneBook extends Component {
+/**
+ * The SingleBook component. 
+ * Represents a single book and info about the book.
+ */
+
+
+class SingleBook extends Component {
   render() {
     let displayedThumbnail = this.props.book.imageLinks
-      ? this.props.book.imageLinks.thumbnail
+        ? this.props.book.imageLinks.thumbnail
       : "";
     return (
       <div className="book">
@@ -40,4 +46,4 @@ class oneBook extends Component {
   }
 }
 
-export default oneBook;
+export default SingleBook;
