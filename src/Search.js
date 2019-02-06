@@ -8,13 +8,14 @@ import * as BooksAPI from "./BooksAPI";
  * Shows the books in the query, if it is empty then nothing shows.
  */
 
-class SearchPage extends Component {
+class Search extends Component {
   state = {
     query: "",
     searchedBooks: []
   };
 
   updateQuery = query => {
+  
     this.setState({
       query: query
     });
@@ -77,4 +78,4 @@ class SearchPage extends Component {
   }
 }
 
-export default SearchPage;
+export default Search

@@ -3,17 +3,18 @@ import { Link } from "react-router-dom";
 import SingleBook from "./SingleBook";
 
 /**
- * The Bookspage page component. 
+ * The Library page component. 
  * Shows the books and the shelves and arrange them.
  */
 
-class BooksPage extends Component{
+class Library extends Component{
     render(){
         return(
          <div className="list-books">
             <div className="list-books-title">
               <h1>MyReads </h1>
             </div>
+
             <div className="list-books-content">
               <div>
                 <div className="bookshelf">
@@ -34,6 +35,7 @@ class BooksPage extends Component{
                 </ol>
               </div>
             </div>
+
             <div className="bookshelf">
                 <h2 className="bookshelf-title">Want to Read</h2>
                   <div className="bookshelf-books">
@@ -52,6 +54,7 @@ class BooksPage extends Component{
                      </ol>
                     </div>
                   </div> 
+                  
                    <div className="bookshelf">
                      <h2 className="bookshelf-title">Read</h2>
                        <div className="bookshelf-books">
@@ -72,8 +75,13 @@ class BooksPage extends Component{
                     </div>           
                   </div>
                 </div>
+
               <div className="open-search">
-                <Link to="/search">Add a book</Link>
+                <Link to="/search">
+                  <button type="button">
+                    
+                  </button>
+                </Link>
               </div>
             </div>
           );
@@ -81,4 +89,4 @@ class BooksPage extends Component{
       }
 
 
-  export default BooksPage ;
+  export default Library 

@@ -40,3 +40,6 @@ To project has a backend server. The provided file [`BooksAPI.js`](src/BooksAPI.
 ## Credits
 
 This repository is the starter code for _all_ Udacity students provides by Udacity.
+
+Thanks to Maeva and Edoh for the Studyjams and to 
+the Slack udacity community for the help.
